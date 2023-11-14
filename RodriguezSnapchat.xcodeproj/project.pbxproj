@@ -19,7 +19,8 @@
 		3740A4222AFAF9C30080B5A6 /* Captura de Pantalla 2023-11-07 a la(s) 18.03.19.png in Resources */ = {isa = PBXBuildFile; fileRef = 3740A4212AFAF9C30080B5A6 /* Captura de Pantalla 2023-11-07 a la(s) 18.03.19.png */; };
 		3740A4252AFB00A70080B5A6 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 3740A4242AFB00A70080B5A6 /* GoogleSignIn */; };
 		3740A4272AFB00A70080B5A6 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3740A4262AFB00A70080B5A6 /* GoogleSignInSwift */; };
-		3740A4292AFB01430080B5A6 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 3740A4282AFB01430080B5A6 /* GoogleService-Info (1).plist */; };
+		3740A4292AFB01430080B5A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3740A4282AFB01430080B5A6 /* GoogleService-Info.plist */; };
+		37A4CD7D2B043085000747FB /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A4CD7C2B043085000747FB /* SnapsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +33,8 @@
 		3740A4102AFAED530080B5A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3740A4122AFAED530080B5A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3740A4212AFAF9C30080B5A6 /* Captura de Pantalla 2023-11-07 a la(s) 18.03.19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura de Pantalla 2023-11-07 a la(s) 18.03.19.png"; sourceTree = "<group>"; };
-		3740A4282AFB01430080B5A6 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		3740A4282AFB01430080B5A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		37A4CD7C2B043085000747FB /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,8 @@
 				3740A4212AFAF9C30080B5A6 /* Captura de Pantalla 2023-11-07 a la(s) 18.03.19.png */,
 				3740A40F2AFAED530080B5A6 /* LaunchScreen.storyboard */,
 				3740A4122AFAED530080B5A6 /* Info.plist */,
-				3740A4282AFB01430080B5A6 /* GoogleService-Info (1).plist */,
+				3740A4282AFB01430080B5A6 /* GoogleService-Info.plist */,
+				37A4CD7C2B043085000747FB /* SnapsViewController.swift */,
 			);
 			path = RodriguezSnapchat;
 			sourceTree = "<group>";
@@ -154,7 +157,7 @@
 			files = (
 				3740A4112AFAED530080B5A6 /* LaunchScreen.storyboard in Resources */,
 				3740A4222AFAF9C30080B5A6 /* Captura de Pantalla 2023-11-07 a la(s) 18.03.19.png in Resources */,
-				3740A4292AFB01430080B5A6 /* GoogleService-Info (1).plist in Resources */,
+				3740A4292AFB01430080B5A6 /* GoogleService-Info.plist in Resources */,
 				3740A40E2AFAED530080B5A6 /* Assets.xcassets in Resources */,
 				3740A40C2AFAED520080B5A6 /* Main.storyboard in Resources */,
 			);
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A4CD7D2B043085000747FB /* SnapsViewController.swift in Sources */,
 				3740A4092AFAED520080B5A6 /* iniciarSesionViewController.swift in Sources */,
 				3740A4052AFAED520080B5A6 /* AppDelegate.swift in Sources */,
 				3740A4072AFAED520080B5A6 /* SceneDelegate.swift in Sources */,

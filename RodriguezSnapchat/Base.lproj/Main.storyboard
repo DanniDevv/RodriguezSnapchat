@@ -64,11 +64,20 @@
                                     <action selector="iniciarSesionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rp3-W8-SHe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgg-SL-wt3">
+                                <rect key="frame" x="107" y="525.5" width="200" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="iye-dS-Z2G"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Inicio con Google"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9cF-32-SoR" firstAttribute="top" secondItem="ybC-d5-c4I" secondAttribute="bottom" constant="25" id="2YL-Gg-QLa"/>
+                            <constraint firstItem="Tgg-SL-wt3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8LG-Zj-M6w"/>
                             <constraint firstItem="ccM-JU-GX4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BVe-SE-UvM"/>
                             <constraint firstItem="ybC-d5-c4I" firstAttribute="top" secondItem="ccM-JU-GX4" secondAttribute="bottom" constant="25" id="LIS-KH-4a2"/>
                             <constraint firstItem="Hyx-s8-XBh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QSj-4q-m2D"/>
@@ -76,6 +85,7 @@
                             <constraint firstItem="ybC-d5-c4I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WjW-sz-HlN"/>
                             <constraint firstItem="ccM-JU-GX4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="YgS-35-QtU"/>
                             <constraint firstItem="9cF-32-SoR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c3B-GJ-7kQ"/>
+                            <constraint firstItem="Tgg-SL-wt3" firstAttribute="top" secondItem="Hyx-s8-XBh" secondAttribute="bottom" constant="30" id="g4Z-T3-o2m"/>
                             <constraint firstItem="5GL-H0-7KX" firstAttribute="top" secondItem="9cF-32-SoR" secondAttribute="bottom" constant="25" id="hgG-gW-x0v"/>
                             <constraint firstItem="hrJ-ig-tWH" firstAttribute="top" secondItem="5GL-H0-7KX" secondAttribute="bottom" constant="25" id="lVN-VY-sy5"/>
                             <constraint firstItem="hrJ-ig-tWH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qaS-A5-MV6"/>
@@ -84,12 +94,70 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="9cF-32-SoR" id="kkb-ln-5cP"/>
+                        <outlet property="googleSignInButton" destination="Tgg-SL-wt3" id="OvO-rq-IVZ"/>
                         <outlet property="passwordTextField" destination="hrJ-ig-tWH" id="mva-C1-wsZ"/>
+                        <segue destination="1Kf-9J-tmu" kind="presentation" identifier="iniciarsesionsegue" id="H2S-ra-OYM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-22" y="109"/>
+        </scene>
+        <!--Snaps View Controller-->
+        <scene sceneID="7iA-Ug-uM6">
+            <objects>
+                <viewController id="PcF-79-yWm" customClass="SnapsViewController" customModule="RodriguezSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZWr-ac-XlR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vJS-F0-zD5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="X70-f7-cD1">
+                        <barButtonItem key="leftBarButtonItem" title="Cerrar Sesión" id="CxI-gA-5Gz">
+                            <connections>
+                                <action selector="cerrarSesionTapped:" destination="PcF-79-yWm" id="yvJ-tD-3bR"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FdS-ox-puo"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mvw-QQ-g2s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1561" y="108"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="62h-eE-zWq">
+            <objects>
+                <viewController id="hWe-lq-Gfk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S3g-Le-Mia">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="5WN-2v-Dzc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hv8-OO-aaC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2420" y="108"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nzm-pB-6Di">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="1Kf-9J-tmu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LGa-6L-EWh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PcF-79-yWm" kind="relationship" relationship="rootViewController" id="CaM-el-vzI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwT-0n-u3E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="108"/>
         </scene>
     </scenes>
     <resources>
