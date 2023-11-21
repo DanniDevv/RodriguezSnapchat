@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import GoogleSignIn
+import FirebaseDatabase
 
 class iniciarSesionViewController: UIViewController {
 
@@ -25,6 +26,12 @@ class iniciarSesionViewController: UIViewController {
                         print("Se presento el siguiente error al crear el: \(error)")
                     }else{
                         print("El usuaio fue creado exitosamente")
+                        Database.database().reference().child("usuarios").child(user!.user.uid).child("email").setValue(user!.user.email)
+                        let alerta = UIAlertController(title: "Creacion de Usuario", message: "Usuario: \(self.emailTextField.text!) se creo correctamente.", preferredStyle: .alert)
+                        let btnOK = UIAlertAction(title:"Aceptar", style: .default, handler: {(UIAlertAction) in
+                            self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
+                        })
+                        alerta.addAction(btnOK)
                         self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
                     }
                 })
