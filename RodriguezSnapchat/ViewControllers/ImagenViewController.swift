@@ -10,9 +10,16 @@ import FirebaseStorage
 
 class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var imagePicker = UIImagePickerController()
+    var imagenID = NSUUID().uuidString
     //-----------
-    @IBAction func camaraTapped(_ sender: Any) {
+    
+    @IBAction func mediaTapped(_ sender: Any) {
         imagePicker.sourceType = .savedPhotosAlbum
+        imagePicker.allowsEditing = false
+        present(imagePicker, animated: true, completion: nil)
+    }
+    @IBAction func camaraTapped(_ sender: Any) {
+        imagePicker.sourceType = .camera
         imagePicker.allowsEditing = false
         present(imagePicker, animated: true, completion: nil)
     }
@@ -20,11 +27,13 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var descripcionTextField: UITextField!
     @IBOutlet weak var elegirContactoBoton: UIButton!
+    
+    
     @IBAction func elegirContactoTapped(_ sender: Any) {
         self.elegirContactoBoton.isEnabled = false
         let imagenesFolder = Storage.storage().reference().child("imagenes")
         let imagenData = imageView.image?.jpegData(compressionQuality: 0.50)
-        let cargarImagen = imagenesFolder.child("\(NSUUID().uuidString).jpg")
+        let cargarImagen = imagenesFolder.child("\(imagenID).jpg")
             cargarImagen.putData(imagenData!, metadata: nil){(metada,error) in
             if error != nil {
                 self.mostrarAlerta(titulo: "Error", mensaje: "Se produjo un error al subir la imagen. Verifique su conexion a internet y vuelva a intentarlo.", accion: "Aceptar")
@@ -63,6 +72,13 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
         */
     }
     //-----------
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let siguienteVC = segue.destination as! ElegirUsuarioViewController
+        siguienteVC.imageURL = sender as! String
+        siguienteVC.descrip = descripcionTextField.text!
+        siguienteVC.imagenID = imagenID
+    }
     
     
     override func viewDidLoad() {
